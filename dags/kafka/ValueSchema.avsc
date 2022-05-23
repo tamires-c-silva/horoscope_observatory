@@ -1,0 +1,62 @@
+{
+  "namespace": "example.avro",
+  "type": "record",
+  "name": "myrecord",
+  "fields": [
+    {
+      "name": "date_range",
+      "type": "string"
+    },
+    {
+      "name": "current_date",
+      "type": "string"  
+    },
+    {
+      "name": "description",
+      "type": "string"  
+    },
+    {
+      "name": "compatibility",
+      "type": "string"  
+    },
+    {
+      "name": "mood",
+      "type": "string"  
+    },
+    {
+      "name": "color",
+      "type": "string"  
+    },
+    {
+      "name": "lucky_number",
+      "type": "string"  
+    },
+    {
+      "name": "lucky_time",
+      "type": "string"  
+    },
+    {
+      "name": "feeling_analysis_affect_dict",
+      "type": {
+        "type":"array",
+        "items":{
+          "name": "affect_dict",
+          "type": "record",
+          "fields":[
+            {
+              "name":"word",
+              "type":"string"
+            },
+            {
+              "name":"feelings",
+              "type": {
+                "type":"array",
+                "items":"string"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
