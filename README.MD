@@ -22,7 +22,7 @@ O notebook Jupyter, também é inicializado pelo docker-compose e nele é possí
 ## Decisões
 Para o projeto escolhi a linguagem Python por conter bibliotecas(como pandas e NRCLex, utilizadas nesse projeto) que lidam com estruturas de dados de maneira simples, por isso escolhi o Airflow como ferramenta de organização de fluxo de processo, dado o  desenvolvimento em python, a ferramenta teria baixo grau de complexidade além de facilidade de acoplamento com outras ferramentas.
 Escolhi utilizar o kafka como ferramenta de transmissão porque permite que o dado seja disponibilizado quase que real-time no ponto de chegada, nesse caso, um bucket na AWS S3, além de suportar a publicação de grande volumetria de dados.
-Escolhi o S3 como ferramenta de armazenamento porque a partir dessa fonte seria possível utilizar esses dados muitas ferramentas, como por exemplo, EMR onde estivesse instalado Spark, um notebook ou ainda disponibilizá-lo em uma ferramenta de consultas como o Athena. Nesse caso, optei pela utlização de um Jupyter notebook local, que permite o uso da linguagem python, seguindo o padrão do desenvolvimento, e de suas bibliotecas. 
+Escolhi o S3 como ferramenta de armazenamento porque a partir dessa fonte seria possível utilizar esses dados muitas ferramentas, como por exemplo, EMR onde estivesse instalado Spark, um notebook ou ainda disponibilizá-lo em uma ferramenta de consultas como o Athena. Nesse caso, optei pela utilização de um Jupyter notebook local, que permite o uso da linguagem python, seguindo o padrão do desenvolvimento, e de suas bibliotecas. 
 
 ## Execução
 
@@ -61,7 +61,9 @@ curl -i -X PUT -H "Accept:application/json" \
 '
 ```
 6 - Para acesso ao Jupyter notebook, insira no navegador o endereço:  http://localhost:8888/lab?token=docker , há na pasta ./script, um arquivo com o nome *get_s3_data.ipynb* nele há um script que captura os dados do bucket *data-horoscope* (criado no passo 2)
+
 7 - Acesse a URL, e efetue login no airflow
+
 8 - Inicialize a a DAG **horoscope_observatory**
 
  
