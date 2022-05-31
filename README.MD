@@ -70,11 +70,7 @@ curl -i -X PUT -H "Accept:application/json" \
 ## Bibliotecas
 - Foi utilizada a biblioteca NRCLex, pois tem como função analisar sentimentos a partir de palavras
  
-## Execução
-Para executar o projeto:
- ```sh
- python3 ./autorizador/src/main.py
- ```
+
 ## Testes
  Para execução dos testes, no diretório /dags, execute:
  ```sh
